@@ -1,0 +1,518 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  scroll-behavior: smooth;
+}
+.mainBox {
+  width: 100%;
+  height: auto;
+  overflow: hidden auto;
+  background: transparent;
+  position: relative;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+  background: #000000a4;
+}
+body::-webkit-scrollbar-thumb {
+  width: 10px;
+  height: auto;
+  background: rgba(255, 255, 255, 0.781);
+}
+.mainBox::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://i.ibb.co/nc7n32N/Auto-mechanic-working-in-garage-Repair-service.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  z-index: -2;
+}
+.topBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.rightBox {
+  height: 480px;
+  background: url("./assets/img1.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 80%;
+  display: flex;
+  align-items: center;
+}
+.rightBox > img {
+  width: 100%;
+  transform: rotate(-5deg);
+  -webkit-user-drag: none;
+}
+.leftBox {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.leftBox .navBar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  position: relative;
+}
+.navBar #CHECK {
+  display: none;
+}
+.navBar > label .menuIcon {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.navBar img {
+  height: 80px;
+  -webkit-user-drag: none;
+}
+.buttonBox {
+  padding-left: 20px;
+  display: flex;
+  justify-content: center;
+}
+.buttonBox .button {
+  margin: 0 5px;
+  font-weight: bold;
+  text-transform: capitalize;
+  border-radius: 20px;
+  padding: 5px 20px;
+  border-width: 2px;
+  border-color: #222020;
+}
+.leftBox .titleBox {
+  width: 100%;
+  padding: 30px;
+}
+.titleBox h1 {
+  font-size: 55px;
+  text-transform: capitalize;
+  color: #222020;
+  margin-bottom: 15px;
+}
+.titleBox h1 > span {
+  font-size: 70px;
+  color: #4e4848;
+}
+.titleBox p {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #222020;
+  line-height: 25px;
+}
+/*  */
+.mainBoxService {
+  background: #fff;
+  padding-bottom: 110px;
+}
+.serviceLeftBox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 0 10px 30px;
+}
+.serviceLeftBox > div {
+  width: 49%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #2220203d;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.serviceLeftBox > div img {
+  width: 100px;
+  border-radius: 100px;
+}
+.serviceLeftBox > div span {
+  padding-left: 15px;
+}
+.serviceLeftBox > div > span h1 {
+  font-size: 25px;
+  text-transform: capitalize;
+  color: #222020;
+  margin-bottom: 5px;
+}
+.serviceLeftBox > div > span p {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #222020;
+  line-height: 20px;
+}
+.serviceRightBox {
+  padding: 0 30px;
+}
+.serviceRightBox h1 {
+  font-size: 42px;
+  color: #222020;
+  margin-bottom: 10px;
+}
+.serviceRightBox h1 span {
+  font-size: 50px;
+  color: #4e4848;
+}
+.serviceRightBox p {
+  font-size: 16px;
+  color: #222020;
+  line-height: 22px;
+  text-align: justify;
+}
+/*  */
+/*  */
+.workshopBox {
+  background: url("./assets/box3.svg");
+  padding: 65px 20px;
+  background-position: center;
+  background-size: 100% 100%;
+  margin-top: -80px;
+  z-index: 10;
+}
+.workshopHeader {
+  padding: 10px 0;
+}
+.workshopHeader h1 {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.workshopLocationBox {
+  padding: 0 10px;
+}
+.workshopLocationBox > div {
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+.workshopLocationBox > div img {
+  width: 40%;
+  margin-bottom: 10px;
+}
+.workshopLocationBox > div h2 {
+  color: #222020;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.workshopLocationBox > div p {
+  color: #222020;
+  font-size: 14px;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+/*  */
+/*  */
+.contactBox {
+  padding: 0 30px 20px 30px;
+}
+.contactBox .contactBoxLeft h1 {
+  color: #222020;
+  font-size: 60px;
+  margin-bottom: 10px;
+  -webkit-text-stroke: 2px #fff;
+  margin-top: 5px;
+}
+.contactBox .contactBoxLeft p {
+  color: #fff;
+  -webkit-text-stroke: 0.8px #222020;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+.contactBox .contactBoxLeft span {
+  display: flex;
+  align-items: center;
+}
+.contactBox .contactBoxLeft .contactBoxLeftIcon {
+  margin: 0 10px;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.contactBox .contactBoxLeft .contactBoxLeftIcon:nth-child(1):hover {
+  color: #3b5998;
+}
+.contactBox .contactBoxLeft .contactBoxLeftIcon:nth-child(2):hover {
+  color: #1da1f2;
+}
+.contactBox .contactBoxLeft .contactBoxLeftIcon:nth-child(3):hover {
+  color: #fbad50;
+}
+.contactBox .contactBoxLeft .contactBoxLeftIcon:nth-child(4):hover {
+  color: #db4a39;
+}
+.contactBox .contactBoxRight > div {
+  padding: 100px 20px 20px 20px;
+  background: #fff;
+  margin-top: -80px;
+  z-index: -5;
+}
+.contactBox .contactBoxRight > div > h1 {
+  color: #222020;
+  text-align: center;
+  font-size: 40px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.contactBox .contactBoxRight .contactBoxTextField {
+  margin-bottom: 15px;
+}
+.contactBox .contactBoxRight .contactBoxButton {
+  padding: 5px 20px;
+  border-radius: 50px;
+  border: 2px solid #222020;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+/*  */
+/*  */
+.imageSlideBox {
+  background-color: #fff;
+  padding: 30px;
+}
+.imageSlideBox .imageSlideBoxHeader {
+  padding: 10px 0;
+}
+.imageSlideBox .imageSlideBoxHeader h1 {
+  text-align: center;
+  font-size: 60px;
+  color: #fff;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.imageSlideBox .imageSlideBoxImageWrapper > div {
+  padding: 10px;
+}
+.imageSlideBox .imageSlideBoxImageWrapper > div img {
+  width: 100%;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+}
+.imageSlideBox .imageSlideBoxImageWrapper > div img:hover {
+  transform: scale(1.1);
+}
+/*  */
+/*  */
+.FooterBox {
+  padding: 30px;
+  background: #222020;
+}
+.FooterBox .footerBoxLeft p {
+  color: #fff;
+  font-size: 20px;
+}
+.FooterBox .footerBoxRight span {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.FooterBox .footerBoxRight span .footerIcon {
+  color: #fff;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.FooterBox .footerBoxRight span a:nth-child(1) .footerIcon:hover {
+  color: #3b5998;
+}
+.FooterBox .footerBoxRight span a:nth-child(2) .footerIcon:hover {
+  color: #fbad50;
+}
+.FooterBox .footerBoxRight span a:nth-child(3) .footerIcon:hover {
+  color: #1da1f2;
+}
+.FooterBox .footerBoxRight span a:nth-child(4) .footerIcon:hover {
+  color: #4e4848;
+}
+
+/* */
+/*  */
+/*  */
+@media (max-width: 960px) {
+  .rightBox {
+    height: 400px;
+    background: #222020;
+    justify-content: center;
+  }
+  .rightBox img {
+    padding: 20px 0;
+    width: 70%;
+    transform: rotate(0);
+  }
+  /*  */
+  .mainBoxService {
+    padding-bottom: 10px;
+  }
+  .serviceLeftBox {
+    padding: 0 10px;
+  }
+  .serviceLeftBox > div {
+    width: 49%;
+  }
+  .serviceRightBox {
+    padding: 0 10px 10px 10px;
+    order: -1;
+  }
+  /*  */
+  /*  */
+  .workshopBox {
+    padding: 10px 20px;
+    background: #222020;
+    margin-top: 0px;
+  }
+  /*  */
+  /*  */
+  /*  */
+  .contactBox {
+    padding: 20px;
+  }
+  .contactBox .contactBoxLeft h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    text-align: center;
+  }
+  .contactBox .contactBoxLeft p {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+  }
+  .contactBox .contactBoxLeft span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contactBox .contactBoxRight > div {
+    padding: 20px;
+    margin-top: 0;
+  }
+}
+@media (max-width: 600px) {
+  .rightBox {
+    height: auto;
+  }
+  .rightBox img {
+    padding: 15px 10px;
+    width: 100%;
+  }
+
+  .leftBox .navBar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+  }
+  .buttonBox {
+    display: none;
+    padding-left: 0;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+  }
+  .buttonBox .button {
+    margin: 5px 0;
+    width: 100%;
+  }
+  .navBar > label .menuIcon {
+    display: block;
+  }
+  .navBar > .checkBox {
+    font-size: 50px;
+  }
+  .navBar #CHECK:checked ~ .buttonBox {
+    display: flex;
+  }
+  /*  */
+  .leftBox .titleBox {
+    padding: 20px 10px;
+  }
+  .titleBox h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  .titleBox h1 > span {
+    font-size: 50px;
+  }
+  .titleBox p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  /*  */
+  .serviceLeftBox {
+    padding: 10px;
+  }
+  .serviceLeftBox div > span > h1 {
+    font-size: 28px;
+  }
+  .serviceLeftBox > div > span p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .serviceLeftBox > div {
+    width: 100%;
+  }
+  .serviceRightBox {
+    padding: 0 10px;
+    order: -1;
+  }
+  .serviceRightBox h1 {
+    font-size: 40px;
+  }
+  .serviceRightBox h1 span {
+    font-size: 40px;
+  }
+  .serviceRightBox p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  /*  */
+  /*  */
+  .imageSlideBox {
+    padding: 20px 10px;
+  }
+  .imageSlideBox .imageSlideBoxHeader {
+    padding: 10px 0;
+  }
+  .imageSlideBox .imageSlideBoxHeader h1 {
+    font-size: 45px;
+  }
+  .imageSlideBox .imageSlideBoxImageWrapper > div {
+    padding: 5px;
+  }
+  /*  */
+  /*  */
+  .FooterBox .footerBoxLeft {
+    display: flex;
+    justify-content: center;
+  }
+  .FooterBox .footerBoxLeft p {
+    margin-bottom: 15px;
+  }
+  .FooterBox .footerBoxRight span {
+    display: flex;
+    justify-content: center;
+  }
+  /*  */
+  /*  */
+  .mainBox::before {
+    width: 280%;
+  }
+}
